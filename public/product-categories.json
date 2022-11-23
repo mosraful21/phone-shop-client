@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "category": {
+            "apple": [
+                {
+                    "id": "1001",
+                    "productName": "iphone 14 pro max",
+                    "img": "https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Max-Deep-Purple-7900.jpg",
+                    "originalPrice": 165000,
+                    "resalePrice": 100000,
+                    "use": "3 Month",
+                    "location": "",
+                    "time": "",
+                    "sellerName": ""
+                },
+                {
+                    "id": "1002",
+                    "productName": "iphone 13 pro",
+                    "img": "https://adminapi.applegadgetsbd.com/storage/media/large/3412-49256.jpg",
+                    "originalPrice": 140000,
+                    "resalePrice": 95000,
+                    "use": "3 Month",
+                    "location": "",
+                    "time": "",
+                    "sellerName": ""
+                },
+                {
+                    "id": "1003",
+                    "productName": "iphone 12",
+                    "img": "https://www.mobiledokan.com/wp-content/uploads/2020/10/Apple-iphone-12-Pro-Max.jpg",
+                    "originalPrice": 120000,
+                    "resalePrice": 80000,
+                    "use": "3 Month",
+                    "location": "",
+                    "time": "",
+                    "sellerName": ""
+                }
+            ],
+
+            "samsung": [
+                {
+                    "id": "1001",
+                    "productName": "Samsung Galaxy Z Fold4",
+                    "img": "https://diamu.com.bd/wp-content/uploads/2022/08/Samsung-Galaxy-Z-Fold4-Graygreen-2.jpg",
+                    "originalPrice": 48000,
+                    "resalePrice": 32000,
+                    "use": "3 Month",
+                    "location": "",
+                    "time": "",
+                    "sellerName": ""
+                },
+                {
+                    "id": "1002",
+                    "productName": "Samsung Galaxy S20 FE 2022",
+                    "img": "https://www.muthophone.com.bd/image/cache/catalog/mobiles/samsung/samsung-galaxy-s20-fe-2022/samsung-galaxy-s20-fe-2022-02-600x600.jpg",
+                    "originalPrice": 65000,
+                    "resalePrice": 35000,
+                    "use": "3 Month",
+                    "location": "",
+                    "time": "",
+                    "sellerName": ""
+                },
+                {
+                    "id": "1003",
+                    "productName": "Samsung Galaxy A72",
+                    "img": "https://static.gadgetandgear.com/tmp/product/20210402_1617357362_759064.jpeg",
+                    "originalPrice": 75000,
+                    "resalePrice": 55000,
+                    "use": "3 Month",
+                    "location": "",
+                    "time": "",
+                    "sellerName": ""
+                }
+            ],
+
+            "Xiaomi": [
+            {
+                "id": "1001",
+                "productName": "Xiaomi Redmi Note 12 Pro+",
+                "img": "https://www.bdprice.com.bd/wp-content/uploads/2022/10/Xiaomi-Redmi-Note-12-Pro-Black-Price-in-Bangladesh-1.jpg",
+                "originalPrice": 85000,
+                "resalePrice": 60000,
+                "use": "3 Month",
+                "location": "",
+                "time": "",
+                "sellerName": ""
+            },
+            {
+                "id": "1002",
+                "productName": "Xiaomi Redmi A1+",
+                "img": "https://www.bdprice.com.bd/wp-content/uploads/2022/11/Xiaomi-Redmi-A1-Plus-Light-Green-Price-in-Bangladesh.jpg",
+                "originalPrice": 60000,
+                "resalePrice": 40000,
+                "use": "3 Month",
+                "location": "",
+                "time": "",
+                "sellerName": ""
+            },
+            {
+                "id": "1003",
+                "productName": "Xiaomi Redmi 10 Prime",
+                "img": "https://onlinebdmarket.com/wp-content/uploads/2022/04/4Xiaomi_Redmi_10_Prime_Plus-400x450.jpg",
+                "originalPrice": 45000,
+                "resalePrice": 32000,
+                "use": "3 Month",
+                "location": "",
+                "time": "",
+                "sellerName": ""
+            }
+            ]
+        }
+    }
+]
