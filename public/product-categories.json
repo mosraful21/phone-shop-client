@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "category": {
             "apple": [
                 {
@@ -73,41 +72,40 @@
                     "sellerName": ""
                 }
             ],
-
             "Xiaomi": [
-            {
-                "id": "1001",
-                "productName": "Xiaomi Redmi Note 12 Pro+",
-                "img": "https://www.bdprice.com.bd/wp-content/uploads/2022/10/Xiaomi-Redmi-Note-12-Pro-Black-Price-in-Bangladesh-1.jpg",
-                "originalPrice": 85000,
-                "resalePrice": 60000,
-                "use": "3 Month",
-                "location": "",
-                "time": "",
-                "sellerName": ""
-            },
-            {
-                "id": "1002",
-                "productName": "Xiaomi Redmi A1+",
-                "img": "https://www.bdprice.com.bd/wp-content/uploads/2022/11/Xiaomi-Redmi-A1-Plus-Light-Green-Price-in-Bangladesh.jpg",
-                "originalPrice": 60000,
-                "resalePrice": 40000,
-                "use": "3 Month",
-                "location": "",
-                "time": "",
-                "sellerName": ""
-            },
-            {
-                "id": "1003",
-                "productName": "Xiaomi Redmi 10 Prime",
-                "img": "https://onlinebdmarket.com/wp-content/uploads/2022/04/4Xiaomi_Redmi_10_Prime_Plus-400x450.jpg",
-                "originalPrice": 45000,
-                "resalePrice": 32000,
-                "use": "3 Month",
-                "location": "",
-                "time": "",
-                "sellerName": ""
-            }
+                {
+                    "id": "1001",
+                    "productName": "Xiaomi Redmi Note 12 Pro+",
+                    "img": "https://www.bdprice.com.bd/wp-content/uploads/2022/10/Xiaomi-Redmi-Note-12-Pro-Black-Price-in-Bangladesh-1.jpg",
+                    "originalPrice": 85000,
+                    "resalePrice": 60000,
+                    "use": "3 Month",
+                    "location": "",
+                    "time": "",
+                    "sellerName": ""
+                },
+                {
+                    "id": "1002",
+                    "productName": "Xiaomi Redmi A1+",
+                    "img": "https://www.bdprice.com.bd/wp-content/uploads/2022/11/Xiaomi-Redmi-A1-Plus-Light-Green-Price-in-Bangladesh.jpg",
+                    "originalPrice": 60000,
+                    "resalePrice": 40000,
+                    "use": "3 Month",
+                    "location": "",
+                    "time": "",
+                    "sellerName": ""
+                },
+                {
+                    "id": "1003",
+                    "productName": "Xiaomi Redmi 10 Prime",
+                    "img": "https://onlinebdmarket.com/wp-content/uploads/2022/04/4Xiaomi_Redmi_10_Prime_Plus-400x450.jpg",
+                    "originalPrice": 45000,
+                    "resalePrice": 32000,
+                    "use": "3 Month",
+                    "location": "",
+                    "time": "",
+                    "sellerName": ""
+                }
             ]
         }
     }
