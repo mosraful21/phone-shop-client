@@ -2,13 +2,12 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const CategoryDetails = () => {
-    const { id, category, products } = useLoaderData();
-    console.log(id, category, products)
+    const { products } = useLoaderData();
     return (
         <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-1">
             {
-                products.map(product =>
-                    <div key={product.id}>
+                products.map((product, i) =>
+                    <div key={i}>
                         <div className="card h-5/6 bg-base-100 shadow-xl">
                             <figure className="px-10 pt-10">
                                 <img src={product.image} alt="Shoes" />

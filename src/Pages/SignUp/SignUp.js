@@ -1,33 +1,55 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../Assets/images/login/signup.png';
 import { AuthContext } from '../../context/AuthProvider';
 
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
+
     const { createUser, updateUser } = useContext(AuthContext);
     const [signUpError, setSignUpError] = useState('');
-
+    const [createdUserEmail, setCreatedUserEmail] = useState('');
+    const navigate = useNavigate();
 
     const handleSignUp = (data) => {
         console.log(data);
         setSignUpError('');
-        createUser(data.email, data.password, data.category)
+        createUser(data.email, data.password, data.status)
             .then(() => {
                 toast.success("User Create Successfully");
                 const userInfo = {
                     displayName: data.name
                 }
                 updateUser(userInfo)
-                    .then(() => { })
+                    .then(() => {
+                        navigate('/');
+                        saveUser(data.name, data.email, data.status);
+                    })
                     .catch(error => console.log(error));
             })
             .catch(error => {
                 setSignUpError(error.message)
             });
+    }
+
+    // save user in database
+    const saveUser = (name, email, status) => {
+        const user = { name, email, status };
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                setCreatedUserEmail(email);
+
+            })
     }
 
 
@@ -78,12 +100,12 @@ const SignUp = () => {
                     {/* dropdown selected user position */}
                     <div className="form-control w-full max-w-xs">
                         <label className="label"> <span className="label-text">Users</span></label>
-                        <select type="category" className="input input-bordered w-full max-w-xs" {...register("category", { required: "Category is required" })}>
-                            <option value="Account Category">Account Category</option>
-                            <option value="User Account">User Account</option>
-                            <option value="Seller Account">Seller Account</option>
+                        <select type="status" className="input input-bordered w-full max-w-xs" {...register("status", { required: "status is required" })}>
+                            <option value="Account status">Account status</option>
+                            <option value="User">User</option>
+                            <option value="Seller">Seller</option>
                         </select>
-                        {errors.category && <p className='text-red-600'>{errors.category?.message}</p>}
+                        {errors.status && <p className='text-red-600'>{errors.status?.message}</p>}
                     </div>
 
                     <input className='btn btn-accent w-full mt-6' value="Sign Up" type="submit" />

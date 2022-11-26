@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../Assets/logo.png'
 import { AuthContext } from '../../../context/AuthProvider';
 
 const Navbar = () => {
@@ -41,13 +40,12 @@ return (
                 </ul>
             </div>
             <div className='flex'>
-                <img className='w-24 h-16' src={logo} alt="logo" />
                 <Link to="/" className="btn btn-ghost normal-case text-2xl">Buy & Sell</Link>
             </div>
         </div>
         <div className="navbar-end">
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal p-0">
+                <ul className="menu menu-horizontal text-white font-semibold p-0">
                     {menuItem}
                 </ul>
             </div>

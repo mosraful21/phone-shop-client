@@ -1,6 +1,6 @@
 import React from 'react';
-import img1 from '../../../Assets/images/banner/Samsungg.png';
-import img2 from '../../../Assets/images/banner/xiaomi.png';
+import img1 from '../../../Assets/images/banner/Samsung.jpg';
+import img2 from '../../../Assets/images/banner/sam.jpg';
 import BannerItem from './BannerItem';
 
 const bannerData = [
@@ -21,7 +21,7 @@ const bannerData = [
 
 const Banner = () => {
     return (
-        <div className="carousel w-full py-10 bg-slate-500">
+        <div className="carousel w-4/5 m-auto py-10">
             {
                 bannerData.map(slide => <BannerItem
                     key={slide.id}
