@@ -1,23 +1,34 @@
 import React from 'react';
-import banner from '../../../assets/images/banner/banner.jpg'
-import PrimaryButton from '../../../components/PrimaryButton/PrimaryButton';
+import img1 from '../../../Assets/images/banner/Samsungg.png';
+import img2 from '../../../Assets/images/banner/xiaomi.png';
+import BannerItem from './BannerItem';
 
+const bannerData = [
+    {
+        image: img1,
+        id: 1,
+        prev: 3,
+        next: 2
+    },
+    {
+        image: img2,
+        id: 2,
+        prev: 1,
+        next: 1
+    }
 
+]
 
 const Banner = () => {
     return (
-        <section className='mb-12'>
-            <div className="hero">
-                <div className="hero-content flex-col lg:flex-row-reverse p-0">
-                    <div className='lg:p-10'>
-                        <h1 className="text-4xl font-bold">Welcome to Mobile Shop</h1>
-                        <p className="py-6">We </p>
-                        <PrimaryButton>Buy Now</PrimaryButton>
-                    </div>
-                    <img src={banner} className="lg:w-1/2 rounded-lg" alt='' />
-                </div>
-            </div>
-        </section>
+        <div className="carousel w-full py-10 bg-slate-500">
+            {
+                bannerData.map(slide => <BannerItem
+                    key={slide.id}
+                    slide={slide}
+                ></BannerItem>)
+            }
+        </div>
     );
 };
 

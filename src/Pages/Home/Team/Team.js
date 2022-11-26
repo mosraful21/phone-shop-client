@@ -1,7 +1,7 @@
 import React from 'react';
-import img1 from '../../../assets/images/team/1.jpg';
-import img2 from '../../../assets/images/team/2.jpg';
-import img3 from '../../../assets/images/team/3.jpg';
+import img1 from '../../../Assets/images/team/1.jpg';
+import img2 from '../../../Assets/images/team/2.jpg';
+import img3 from '../../../Assets/images/team/3.jpg';
 
 const Team = () => {
     return (

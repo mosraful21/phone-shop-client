@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/login/signup.png';
+import logo from '../../Assets/images/login/signup.png';
 import { AuthContext } from '../../context/AuthProvider';
 
 

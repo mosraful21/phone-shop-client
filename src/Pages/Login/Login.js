@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
-import logo from '../../assets/images/login/login.png';
+import logo from '../../Assets/images/login/login.png';
 import { AuthContext } from '../../context/AuthProvider';
 
 const Login = () => {
@@ -70,17 +70,6 @@ const Login = () => {
                             })}
                             className="input input-bordered w-full max-w-xs" />
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
-                    </div>
-
-                    {/* dropdown selected user position */}
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label"> <span className="label-text">Users</span></label>
-                        <select className="input input-bordered w-full max-w-xs" {...register("category", { required: "Category is required" })}>
-                            <option value="">Select Your Account Category</option>
-                            <option value="User Account">User Account</option>
-                            <option value="Seller Account">Seller Account</option>
-                        </select>
-                        {errors.category && <p className='text-red-600'>{errors.category?.message}</p>}
                     </div>
 
                     <input className='btn btn-accent w-full mt-6' value="Login" type="submit" />
