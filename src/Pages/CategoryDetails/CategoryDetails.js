@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import BookingModal from './BookingModal';
 
 const CategoryDetails = () => {
     const { products } = useLoaderData();
@@ -23,12 +24,14 @@ const CategoryDetails = () => {
                                     <p>Seller Name: {product.sellersName}</p>
                                 </div>
                                 <div className="card-actions">
-                                    <button className="btn btn-primary">Book Now</button>
+                                    <label htmlFor="booking-modal" className="btn btn-primary text-white">Book Now</label>
                                 </div>
                             </div>
                         </div>
-                    </div>)
+                    </div>
+                )
             }
+            <BookingModal></BookingModal>
         </div>
     );
 };

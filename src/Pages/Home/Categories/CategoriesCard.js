@@ -11,7 +11,6 @@ const CategoriesCard = ({categoryData}) => {
                
                 <div className="card-actions justify-center">
                     <Link to={`/categoryDetails/${_id}`}>
-                        
                         <button className='border-2 rounded bg-blue-600 text-white px-4 py-1 '>View All Products</button>
                     </Link>
                 </div>

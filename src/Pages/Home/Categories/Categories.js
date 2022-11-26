@@ -3,6 +3,7 @@ import CategoriesCard from './CategoriesCard';
 
 const Categories = () => {
     const [categories, setCategories] = useState([]);
+    const [product, setProduct] = useState(null);
 
     useEffect(() => {
         fetch('http://localhost:5000/products/')
@@ -19,6 +20,8 @@ const Categories = () => {
                 categories.map(categoryData => <CategoriesCard
                     key={categoryData._id}
                     categoryData={categoryData}
+                    setProduct= {setProduct}
+                    product={product}
                 ></CategoriesCard>)
             }
         </div>
