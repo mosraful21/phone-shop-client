@@ -1,12 +1,21 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 
-const Dashboard = () => {
-    const users = useLoaderData();
+const AllSellers = () => {
 
+    const [sallers, setSallers] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/users')
+            .then(res => res.json())
+            .then(data => {
+                const showSallers = data.filter(saler => saler.check === true)
+                // console.log(showSallers)
+
+                setSallers(showSallers)
+            })
+    }, [])
     return (
         <div>
-            <h2 className='text-3xl text-center font-semibold  mt-10'>All Users</h2>
+            <h2 className='text-3xl text-center font-semibold  mt-10'>All Sellers</h2>
 
             <div className="overflow-x-auto w-5/6 mx-auto my-10">
                 <table className="table w-full">
@@ -24,7 +33,7 @@ const Dashboard = () => {
                     <tbody>
 
                         {
-                            users.map(user => <tr key={user._id}>
+                            sallers.map(user => <tr key={user._id}>
 
                                 <td>
                                     <div className="flex items-center space-x-3">
@@ -58,4 +67,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default AllSellers;

@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../Assets/images/login/signup.png';
-import { AuthContext } from '../../context/AuthProvider';
+import { AuthContext } from '../../Context/AuthProvider';
 
 
 const SignUp = () => {
