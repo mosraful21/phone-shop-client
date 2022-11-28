@@ -46,16 +46,15 @@ const Advertise = () => {
     }
     return (
         <div>
-
             {
                 advertised.length === 0 ? <h2> </h2>
                     :
                     <>
-                        <h2 className="text-5xl text-center m-8">Advertised Items</h2>
+                        <h2 className="text-3xl text-center font-bold m-8">Advertised Items</h2>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-10 m-5 md:m-20'>
                             {
-                                advertised.map(product => <div key={product._id} className="card w-full shadow-xl bg-blue-500">
-                                    <div className="card-body">
+                                advertised.map(product => <div key={product._id} className="card w-full shadow-3xl">
+                                    <div className="card-body shadow-2xl">
                                         <h2 className="card-title">Product Name: {product.productName}</h2>
                                         <h2 className='text-xl'>Seller Name: {product.sellerName}</h2>
                                         <h2 className='text-xl'>Resale Price: {product.resalePrice} BDT</h2>
