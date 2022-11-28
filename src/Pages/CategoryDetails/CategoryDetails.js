@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
@@ -6,6 +6,7 @@ import { AuthContext } from '../../Context/AuthProvider';
 const CategoryDetails = () => {
     const { products } = useLoaderData();
     const { user } = useContext(AuthContext);
+    const [mobileData, setMobileData] = useState('');
 
     const handleWishList = (product) => {
         const wishList = {
@@ -52,7 +53,6 @@ const CategoryDetails = () => {
             resalePrice,
             location,
         }
-        console.log(booking)
         // and once data is saved then close the modal and display success toast
         fetch('http://localhost:5000/bookings', {
             method: 'POST',
@@ -93,25 +93,27 @@ const CategoryDetails = () => {
                                     <p className='border-2 p-2'>Seller Name: {product.sellersName}</p>
 
                                     <div className="card-actions justify-center flex">
-                                        <label onClick={() => handleBooking(product)} htmlFor="booking-modal" className="btn btn-primary">Book Now</label>
-                                        <button onClick={() => handleWishList(product)} className='btn btn-secondary'>Add to Wishlist</button>
                                         <div>
-                                            <input type="checkbox" id="booking-modal" className="modal-toggle" />
+                                            <input type="checkbox" id="book-modal" className="modal-toggle" />
                                             <div className="modal">
-                                                <div className="modal-box">
-                                                    <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                                                <div className="modal-box relative bg-white">
+                                                    <label
+                                                        htmlFor="book-modal"
+                                                        className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                                                     <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 justify-center'>
                                                         <input name='name' type="text" disabled defaultValue={user?.displayName} className="input input-bordered w-full mt-6" />
                                                         <input name='email' type="text" disabled defaultValue={user?.email} className="input input-bordered w-full " />
-                                                        <input name='productName' type="text" disabled defaultValue={product?.product_name} className="input input-bordered w-full " />
-                                                        <input name='resalePrice' type="text" disabled defaultValue={product.resalePrice} className="input input-bordered w-full" />
+                                                        <input name='productName' type="text" disabled defaultValue={mobileData?.product_name} className="input input-bordered w-full " />
+                                                        <input name='resalePrice' type="text" disabled defaultValue={mobileData?.resalePrice} className="input input-bordered w-full" />
                                                         <input required name='phone' type="text" placeholder='Your Phone Number' className="input input-bordered w-full" />
                                                         <input required name='location' type="text" placeholder='Meeting Location' className="input input-bordered w-full " />
-                                                        <input htmlFor="booking-modal" className='btn btn-primary' type="Submit" value="Submit" />
+                                                        <input htmlFor="book-modal" className='btn btn-primary' type="Submit" value="Submit" />
                                                     </form>
                                                 </div>
                                             </div>
                                         </div>
+                                        <label onClick={() => setMobileData(product)} htmlFor="book-modal" className="btn btn-primary">Book Now</label>
+                                        <button onClick={() => handleWishList(product)} className='btn btn-secondary'>Add to Wishlist</button>
                                     </div>
                                 </div>
                             </div>

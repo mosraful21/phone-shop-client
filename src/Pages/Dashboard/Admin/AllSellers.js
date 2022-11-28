@@ -57,7 +57,7 @@ const AllSellers = () => {
                                 <td>
                                     {user?.email}
                                 </td>
-                                <td>{user?.status === 'seller' ? 'Seller' : 'Buyer'}</td>
+                                <td>{user?.status === 'User' ? 'User' : 'Seller'}</td>
                                 <th>
                                     <button onClick={() => handleDelete(user)} className="btn btn-error btn-sm">Delete</button>
                                 </th>

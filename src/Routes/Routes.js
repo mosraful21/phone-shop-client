@@ -4,6 +4,8 @@ import Main from "../Layout/Main"
 import Blog from "../Pages/Blog/Blog";
 import CategoryDetails from "../Pages/CategoryDetails/CategoryDetails";
 import AllBuyers from "../Pages/Dashboard/Admin/AllBuyers";
+import AllUser from "../Pages/Dashboard/Admin/AllUser";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 import MyBookings from "../Pages/Dashboard/MyBookings/MyBookings";
 import MyWishList from "../Pages/Dashboard/MyWishList/MyWishList";
 import AddProduct from "../Pages/Dashboard/Seller/AddProduct";
@@ -39,7 +41,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/categoryDetails/:id',
-                element: <CategoryDetails></CategoryDetails>,
+                element: <PrivateRoutes><CategoryDetails></CategoryDetails></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
             },
 
@@ -49,6 +51,14 @@ const router = createBrowserRouter([
         path: '/dashboard',
         element: <PrivateRoutes><DashboardLayout></DashboardLayout></PrivateRoutes>,
         children: [
+            {
+                path: '/dashboard',
+                element: <Dashboard></Dashboard>
+            },
+            {
+                path: '/dashboard/alluser',
+                element: <AllUser></AllUser>
+            },
             {
                 path: '/dashboard/MyBookings',
                 element: <MyBookings></MyBookings>

@@ -9,14 +9,14 @@ const AllBuyers = () => {
         fetch('http://localhost:5000/users')
             .then(res => res.json())
             .then(data => {
-                const showBuyers = data.filter(buyer => buyer.status === "user")
+                const showBuyers = data.filter(buyer => buyer.status === "Buyer")
                 setBuyers(showBuyers)
             })
     }, [user])
 
     const handleDelete = user => {
         console.log(user)
-        fetch(`http://localhost:5000/user/${user._id}`, {
+        fetch(`http://localhost:5000/users/${user._id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'
@@ -52,12 +52,12 @@ const AllBuyers = () => {
                         {
                             buyers.map(user => <tr key={user._id}>
                                 <td>
-                                    {user?.name}
+                                    {user?.displayName}
                                 </td>
                                 <td>
                                     {user?.email}
                                 </td>
-                                <td>{user?.status === 'user' ? 'Buyer' : 'Seller'}</td>
+                                <td>{user?.status === 'Buyer' ? 'Buyer' : 'User'}</td>
                                 <th>
                                     <button onClick={() => handleDelete(user)} className="btn btn-error btn-sm">Delete</button>
                                 </th>
