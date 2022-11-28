@@ -28,18 +28,14 @@ const AllBuyers = () => {
                 if (data.acknowledged) {
                     toast.success('user Deleted Successfully')
                 }
-
                 // const remaining= myProducts.filter(product => product._id )
             })
-
     }
     return (
         <div>
             <h2 className='text-3xl font-bold py-5'>All Buyers</h2>
-
             <div className="">
                 <table className="table w-full">
-
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -63,11 +59,7 @@ const AllBuyers = () => {
                                 </th>
                             </tr>)
                         }
-
-
                     </tbody>
-
-
                 </table>
             </div>
         </div>
