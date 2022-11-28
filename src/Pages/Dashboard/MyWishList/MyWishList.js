@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
-import { AuthContext } from '../../../context/AuthProvider';
+import { AuthContext } from '../../../Context/AuthProvider';
 
 const MyWishList = () => {
     const {user} = useContext(AuthContext);
@@ -15,7 +15,7 @@ const MyWishList = () => {
     })
     return (
         <div>
-        <h2 className="text-2xl">My Orders: </h2>
+        <h2 className="text-3xl font-bold py-5">My Orders: </h2>
         <div className="overflow-x-auto">
             <table className="table w-full">
                 <thead>

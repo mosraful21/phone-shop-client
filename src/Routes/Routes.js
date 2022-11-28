@@ -3,11 +3,17 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import Main from "../Layout/Main"
 import Blog from "../Pages/Blog/Blog";
 import CategoryDetails from "../Pages/CategoryDetails/CategoryDetails";
+import AllBuyers from "../Pages/Dashboard/Admin/AllBuyers";
+import MyBookings from "../Pages/Dashboard/MyBookings/MyBookings";
+import MyWishList from "../Pages/Dashboard/MyWishList/MyWishList";
+import AddProduct from "../Pages/Dashboard/Seller/AddProduct";
+import MyBuyers from "../Pages/Dashboard/Seller/MyBuyers";
+import MyProducts from "../Pages/Dashboard/Seller/MyProducts";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import ErrorRoute from "../Pages/Shared/ErrorRoute/ErrorRoute";
 import SignUp from "../Pages/SignUp/Signup";
-import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -41,11 +47,34 @@ const router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+        element: <PrivateRoutes><DashboardLayout></DashboardLayout></PrivateRoutes>,
         children: [
+            {
+                path: '/dashboard/MyBookings',
+                element: <MyBookings></MyBookings>
+            },
+            {
+                path: '/dashboard/MyWishList',
+                element: <MyWishList></MyWishList>
+            },
+            {
+                path: '/dashboard/addproduct',
+                element: <AddProduct></AddProduct>
+            },
+            {
+                path: '/dashboard/myproducts',
+                element: <MyProducts></MyProducts>
+            },
+            {
+                path: '/dashboard/mybuyers',
+                element: <MyBuyers></MyBuyers>
+            },
+            {
+                path: '/dashboard/allbuyers',
+                element: <AllBuyers></AllBuyers>
+            },
         ]
     },
-
     {
         path: '*',
         element: <ErrorRoute></ErrorRoute>
