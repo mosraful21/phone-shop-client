@@ -1,4 +1,7 @@
-### Live Website:  https://product-marketing-da1c6.web.app/
+### Live Website:  https://product-marketing-da1c6.web.app
+
+Admin email: habib@gmail.com
+Admin password: 123456
 
 
 If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
